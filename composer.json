@@ -1,0 +1,54 @@
+{
+    "name": "webaune/timezones",
+    "description": "My awesome package",
+    "keywords": [
+        "webaune",
+        "timezones"
+    ],
+    "homepage": "https://github.com/rzksbr-civa/timezones",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Webaune Solutions",
+            "email": "info@webuane.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "*",
+        "phpunit/phpunit": "^10.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webaune\\Timezones\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webaune\\Timezones\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webaune\\Timezones\\TimezonesServiceProvider"
+            ],
+            "aliases": {
+                "Timezones": "Webaune\\Timezones\\TimezonesFacade"
+            }
+        }
+    }
+}
